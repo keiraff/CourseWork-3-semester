@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="CourseWork.Views.TotalContentUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CourseWork.Views"
+             xmlns:vmc="clr-namespace:CourseWork.ViewModels.Content"
+             mc:Ignorable="d" d:DataContext="{x:Type vmc:TotalContent}"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="MintCream">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Background="LavenderBlush"  VerticalAlignment="Top" Foreground="Black" TextAlignment="Left" Height="60" FontSize="30" Text="Ваш результат:" />
+        
+        <Viewbox  VerticalAlignment="Center">
+                <Border  BorderBrush="Gray" BorderThickness="0.5">
+                <TextBlock Background="LavenderBlush" Foreground="Black" FontSize="14"  Height="20" Width="300"  >
+                <Run Text="Правильных ответов"/>
+                <Run Text="{Binding CountRight}"/>
+                <Run Text="из"/>
+                <Run Text="{Binding CountTotal}"/><Run Text="."/>
+                    </TextBlock>
+                </Border>
+            </Viewbox>
+
+        <Button Grid.Row="1" Content="Try Again" Command="{Binding JumpCommand}" Margin="5,0,10,7" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" MaxWidth="200" MinWidth="85"/>
+            
+    </Grid>
+</UserControl>

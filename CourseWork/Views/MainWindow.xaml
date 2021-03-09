@@ -1,0 +1,58 @@
+﻿<Window x:Class="CourseWork.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork"
+        xmlns:vm="clr-namespace:CourseWork.ViewModels"
+        xmlns:vmc="clr-namespace:CourseWork.ViewModels.Content"
+        xmlns:v="clr-namespace:CourseWork.Views"
+        mc:Ignorable="d" d:DataContext="{x:Type vm:MainWindowViewModel}"
+        Title="{Binding Temp}" Height="450" Width="800" WindowState="Maximized">
+    <Grid Background="MintCream">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*">
+            </ColumnDefinition>
+            <ColumnDefinition Width="7*">
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="42*">
+            </RowDefinition>
+            <RowDefinition Height="309*">
+            </RowDefinition>
+            <RowDefinition Height="53*">
+            </RowDefinition>
+            <RowDefinition Height="15*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Image MaxHeight="30"  MaxWidth="30" Source="C:\Users\diana\source\repos\CourseWork\CourseWork\CourseWork\Images\search6.png"/>
+                <TextBox  Text="{Binding Path=SynchronizedText, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}"
+                         MinHeight="25" MaxHeight="45" Background="MintCream" FontSize="16" MinWidth="800"/>
+                </StackPanel>
+            <TextBlock Background="LavenderBlush" Text="Список тестов:" FontSize="20" FontStyle="Oblique"  Height="50"/>
+        </StackPanel>
+        <Border Grid.Column="0" Grid.RowSpan="3" BorderBrush="Gray" BorderThickness="1"/>
+        <ListView Background="MintCream" FontStyle="Oblique"  Grid.Row="1" VerticalAlignment="Top"  ItemsSource="{Binding TestsCollection, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Path=SelectedTest}"/>
+        <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="1"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.ColumnSpan="2" Grid.RowSpan="2" BorderBrush="Gray" BorderThickness="1"/>
+            <Button Grid.Row="0" Grid.Column="1"  Margin="10,7,2,0" Content="Delete" Command="{Binding DeleteCommand}" CommandParameter="{Binding SelectedTest, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch" MaxWidth="200" MinWidth="85" VerticalAlignment="Top"/>
+            <Button Grid.Row="0" Content="Select" Command="{Binding StartCommand}" CommandParameter="{Binding SelectedTest, UpdateSourceTrigger=PropertyChanged}" Margin="2,7,10,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" MaxWidth="200" MinWidth="85"/>
+            <Button Grid.Row="1" Content="Create" Command="{Binding CreateCommand}" Margin="5,0,10,7" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" MaxWidth="200" MinWidth="85" Grid.ColumnSpan="2"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.RowSpan="3">
+            <ContentPresenter x:Name="OutputView">
+            </ContentPresenter>
+        </Grid>
+        </Grid>
+</Window>

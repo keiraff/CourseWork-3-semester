@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<ArrayOfTest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Test>
+    <Name>Пробный тест</Name>
+    <DateOfLastEditing>2020-12-21T07:50:54.83925715+03:00</DateOfLastEditing>
+    <Questions>
+      <Question xsi:type="CloseTask" IsOnlyOneRightAnswer="true">
+        <QuestionValue>Три минус два</QuestionValue>
+        <AllAnswers>
+          <Answer IsCorrect="true">
+            <AnswerValue>Один</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="false">
+            <AnswerValue>Два</AnswerValue>
+          </Answer>
+        </AllAnswers>
+      </Question>
+      <Question xsi:type="CloseTask" IsOnlyOneRightAnswer="true">
+        <QuestionValue>Дважды два</QuestionValue>
+        <AllAnswers>
+          <Answer IsCorrect="false">
+            <AnswerValue>Три</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="true">
+            <AnswerValue>Четыре</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="false">
+            <AnswerValue>Пять</AnswerValue>
+          </Answer>
+        </AllAnswers>
+      </Question>
+      <Question xsi:type="CloseTask" IsOnlyOneRightAnswer="true">
+        <QuestionValue>Трижды два</QuestionValue>
+        <AllAnswers>
+          <Answer IsCorrect="true">
+            <AnswerValue>Больше трёх</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="false">
+            <AnswerValue>Больше шести</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="true">
+            <AnswerValue>Меньше девяти</AnswerValue>
+          </Answer>
+        </AllAnswers>
+      </Question>
+    </Questions>
+  </Test>
+  <Test>
+    <Name>Тест на знание ООП</Name>
+    <DateOfLastEditing>2020-12-21T07:54:04.7453505+03:00</DateOfLastEditing>
+    <Questions>
+      <Question xsi:type="CloseTask" IsOnlyOneRightAnswer="true">
+        <QuestionValue>Что из перечисленног не является принципом ООП?</QuestionValue>
+        <AllAnswers>
+          <Answer IsCorrect="false">
+            <AnswerValue>Инкапсуляция</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="true">
+            <AnswerValue>Делегация</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="false">
+            <AnswerValue>Полиморфизм</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="false">
+            <AnswerValue>Наследование</AnswerValue>
+          </Answer>
+        </AllAnswers>
+      </Question>
+      <Question xsi:type="CloseTask" IsOnlyOneRightAnswer="false">
+        <QuestionValue>Что из перечиленного  является модификатором доступа языка C#?</QuestionValue>
+        <AllAnswers>
+          <Answer IsCorrect="true">
+            <AnswerValue>private</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="true">
+            <AnswerValue>protected</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="true">
+            <AnswerValue>public</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="true">
+            <AnswerValue>internal</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="true">
+            <AnswerValue>private protected</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="false">
+            <AnswerValue>private internal</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="false">
+            <AnswerValue>public internal</AnswerValue>
+          </Answer>
+        </AllAnswers>
+      </Question>
+      <Question xsi:type="CloseTask" IsOnlyOneRightAnswer="true">
+        <QuestionValue>Что такое наследование в ООП?</QuestionValue>
+        <AllAnswers>
+          <Answer IsCorrect="true">
+            <AnswerValue>Механизм, который позволяет описать новый класс на основе существующего (родительского), при этом свойства и функциональность родительского класса заимствуются новым классом.</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="false">
+            <AnswerValue>Ограничение доступа к составляющим объект компонентам (методам и переменным).</AnswerValue>
+          </Answer>
+          <Answer IsCorrect="false">
+            <AnswerValue>Придание объекту характеристик, которые отличают его от всех других объектов, четко определяя его концептуальные границы.</AnswerValue>
+          </Answer>
+        </AllAnswers>
+      </Question>
+    </Questions>
+    <Description>Объе́ктно-ориенти́рованное программи́рование (ООП) — методология программирования, основанная на представлении программы в виде совокупности объектов, каждый из которых является экземпляром определённого класса, а классы образуют иерархию наследования.</Description>
+  </Test>
+  <Test>
+    <Name>11</Name>
+    <DateOfLastEditing>2020-12-21T07:54:04.7453505+03:00</DateOfLastEditing>
+    <Questions>
+      <Question xsi:type="CloseTask" IsOnlyOneRightAnswer="true">
+        <QuestionValue>1</QuestionValue>
+        <AllAnswers>
+          <Answer IsCorrect="true">
+            <AnswerValue>1</AnswerValue>
+          </Answer>
+        </AllAnswers>
+      </Question>
+    </Questions>
+    <Description>11</Description>
+  </Test>
+</ArrayOfTest>
